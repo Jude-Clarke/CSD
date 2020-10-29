@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animation with JS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./cars.css">
+  </head>
+  <body>
+    <div class="start">
+      <button class="show">View Showroom</button>
+    </div>
+    <div id="show-room" class="fade-in container carousel hide">
+      <!-- <button class="carousel_button previous" id="previous"><</button> -->
+      <div class="carousel_cards">
+        <div class="card">
+          <div class="car">
+            <div class="circle"></div>
+            <!-- <div class="car-animation"> -->
+              <img class="base" src="./images/gallardo.png" alt="Lamborghini Gallardo">
+              <div class="wheel-frame">
+                <img class="front wheel" src="./images/front.png">
+                <img class="back wheel" src="./images/back.png">
+              </div>
+
+            <!-- </div> -->
+          </div>
+          <div class="info">
+            <h1 class="title">Lamborghini Gallardo</h1>
+            <h3>A classic piece of time.</h3>
+            <div class="colors">
+              <table>
+                <tr>
+                  <td><button class="green">green</button></td>
+                  <td><button class="purple">purple</button></td>
+                  <td><button class="orange active">orange</button></td>
+                  <td><button class="white">white</button></td>
+                </tr>
+                <tr>
+                  <td><button class="yellow">yellow</button></td>
+                  <td><button class="blue">blue</button></td>
+                  <td><button class="gold">gold</button></td>
+                  <td><button class="gray">gray</button></td>
+                </tr>
+              </table>
+            </div>
+            <div CLASS="purchase">
+              <a href="https://www.lamborghini.com/en-en" target="_blank"><button>Purchase</button></a>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="card">
+          <div class="car">
+            <div class="circle"></div>
+            <img src="./images/570s.png" alt="McLaren 570s">
+          </div>
+          <div class="info">
+            <h1 class="title">McLaren 570s</h1>
+            <h3>A modern-day masterpeice.</h3>
+            <div class="colors">
+              <table>
+                <tr>
+                  <td><button class="green">green</button></td>
+                  <td><button class="purple">purple</button></td>
+                  <td><button class="orange active">orange</button></td>
+                  <td><button class="white">white</button></td>
+                </tr>
+                <tr>
+                  <td><button class="yellow">yellow</button></td>
+                  <td><button class="blue">blue</button></td>
+                  <td><button class="gold">gold</button></td>
+                  <td><button class="gray">gray</button></td>
+                </tr>
+              </table>
+            </div>
+            <div CLASS="purchase">
+              <a href="https://www.lamborghini.com/en-en" target="_blank"><button>Purchase</button></a>
+            </div>
+          </div>
+        </div> -->
+        <!-- <div class="card">
+          <div class="car">
+            <div class="circle"></div>
+            <img src="./images/gt-r.png" alt="Nissan GT-R" style="transform: scaleX(-1)">
+          </div>
+          <div class="info">
+            <h1 class="title">Nissan GT-R</h1>
+            <h3>Godzilla on wheels.</h3>
+            <div class="colors">
+              <table>
+                <tr>
+                  <td><button class="green">green</button></td>
+                  <td><button class="purple">purple</button></td>
+                  <td><button class="orange active">orange</button></td>
+                  <td><button class="white">white</button></td>
+                </tr>
+                <tr>
+                  <td><button class="yellow">yellow</button></td>
+                  <td><button class="blue">blue</button></td>
+                  <td><button class="gold">gold</button></td>
+                  <td><button class="gray">gray</button></td>
+                </tr>
+              </table>
+            </div>
+            <div CLASS="purchase">
+              <a href="https://www.lamborghini.com/en-en" target="_blank"><button>Purchase</button></a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <button class="carousel_button next" id="next">></button> -->
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>

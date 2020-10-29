@@ -1,0 +1,344 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My Code */
+body {
+  background-color: #dbdbdb;
+  color: #050510;
+  font-family: 'Titillium Web', sans-serif;
+	animation: fadeIn ease .7s;
+	transition: .2s;
+}
+body::-webkit-scrollbar {
+	width: 10px;
+}
+body::-webkit-scrollbar-track {
+	background: #dbdbdb;
+	box-shadow: inset 0 0 5px #ffa62b;
+	border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb {
+  background: #050510;
+  border-radius: 10px;
+}
+
+.nav {
+  height: 50px;
+  background-color: #eee;
+  border-bottom: 4px #010112 solid;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+#logo {
+  margin-left: 30px;
+  font-family: 'Trispace', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+#logo a {
+  border: 3px #ffa62b solid;
+  padding: 5px;
+  padding-right: 10px;
+
+  border-radius: 36%;
+  margin-top: 5px;
+  float: left;
+}
+.nav a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 12px 30px;
+  border: 1px #eee solid;
+  float: left;
+}
+.nav a:hover {
+  border: 1px #bbb solid;
+}
+.nav ul {
+  position: absolute;
+  right: 30px;
+  z-index: 1;
+}
+.nav ul li {
+  float: left;
+}
+.nav ul li:last-of-type {
+  margin-right: 0;
+}
+#home {
+  background: linear-gradient(rgba(220, 220, 220, 0.5), rgba(0, 0, 0, 0.5)), url(images/techy-interior.jpg) no-repeat center;
+  background-size: cover;
+  height: 600px;
+  text-align: center;
+  border-bottom: 10px #010112 solid;
+}
+.banner-content {
+  font-family: 'Trispace', sans-serif;
+  font-size: 1.5rem;
+  padding: 5%;
+  height: 169px;
+  background-color: #dbdbdba0;
+  border: 4px #ffa62b solid;
+  border-radius: 26%;
+  margin: auto 10%;
+  position: relative;
+  top: 20%;
+}
+.banner-content-dark {
+	font-family: 'Trispace', sans-serif;
+  font-size: 1.5rem;
+  padding: 5%;
+  height: 169px;
+  background-color: #010112a0;
+  border: 4px #dbdbdb solid;
+  border-radius: 26%;
+	color: #ffa62b;
+  margin: auto 10%;
+  position: relative;
+  top: 20%;
+}
+.title-only {
+	height: auto;
+	top: 30%;
+	font-size: 2rem;
+}
+.section {
+  margin: 100px;
+}
+
+/* About Page */
+
+#about {
+	background: url(images/computer-lab.jpg) no-repeat 50% 20%;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+  border-bottom: 10px #010112 solid;
+	background-attachment: fixed;
+}
+.mr-clarke {
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+	object-fit: cover;
+	display: inline-block;
+	float: left;
+	margin: 0 75px 25px 0;
+}
+.about-title {
+	display: inline-block;
+	font-size: 2.4rem;
+}
+.block {
+	margin-bottom: 30px;
+	display: block;
+}
+.paragraphs {
+	font-size: 1.5rem;
+	line-height: 30px;
+	text-indent: 50px;
+}
+.paragraphs p {
+	margin-bottom: 30px;
+}
+/* Projects Page */
+
+#projects {
+	background: url(images/computer-setup.jpg) no-repeat 50% 20%;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+  border-bottom: 10px #010112 solid;
+}
+
+/* Resources */
+
+#resources {
+	background: url(images/resources.jpg) no-repeat 50% 70%;
+  background-size: cover;
+  height: 500px;
+  text-align: center;
+  border-bottom: 10px #010112 solid;
+	background-attachment: fixed;
+}
+
+/* Contact Page*/
+
+#contact {
+  background: url(images/business-card.jpg) no-repeat bottom;
+  background-size: cover;
+  height: 800px;
+  text-align: center;
+  border-bottom: 10px #010112 solid;
+}
+
+#business-card:not(hr) {
+  position: relative;
+  top: 35%;
+  color: #dcd5fd;
+  font-family: 'Syne Mono', monospace;
+}
+#business-card h1 {
+  margin-bottom: 10px;
+}
+#business-card hr {
+  width: 28%;
+  border: 1px #ffa62b inset;
+  height: 1px;
+}
+#contact-info {
+  margin: auto;
+}
+#contact-info a {
+	color: #5D8AA8;
+}
+#contact-info th {
+  color: #ffa62b;
+  font-size: 1.6rem;
+  height: 70px;
+  text-decoration: underline;
+  vertical-align: middle;
+}
+#contact-info td {
+  font-size: 2rem;
+}
+.pop-up {
+	height: auto;
+	width: 28%;
+	position: relative;
+	margin-top: -550px;
+	margin-bottom: -2px;
+	text-align: left;
+}
+
+
+footer p, footer a, footer a:hover {
+	color: #6c757d;
+	margin-bottom: 20px;
+}
+footer {
+  text-align: center;
+  font-size: 1.1rem;
+	height: 160px;
+	background-color: #050510;
+	color: #eee;
+}
+footer p {
+	position: relative;
+	top: 50px;
+}
+
+
+
+#language_select {
+	border: none;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	background-color: rgba(0, 0, 0, 0.67);
+  color: white;
+	cursor: pointer;
+	position: fixed;
+	bottom: 0vh;
+	right: 10px;
+  text-indent: 10px;
+	width: 200px;
+  height: 37px;
+	z-index: 1;
+}
+#language_select:focus {
+	box-shadow: none;
+}
+.no-language-select ~ #language_select {
+	display: none;
+}
+.hide-lang:hover .custom-select {
+	background-color: #fff !important;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 100;}
+}
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 100;}
+}
+@-moz-keyframes fadeIn {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 100;}
+}
+@-o-keyframes fadeIn {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 100;}
+}
+@-ms-keyframes fadeIn {
+	0% {opacity: 0;}
+	50% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+.fadeIn {
+	animation: fadeIn ease 1s;
+	-webkit-animation: fadeIn ease 1s;
+	-moz-animation: fadeIn ease 1s;
+	-o-animation: fadeIn ease 1s;
+	-ms-animation: fadeIn ease 1s;
+}
+.hidden {
+  display: none;
+}
