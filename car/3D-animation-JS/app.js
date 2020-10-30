@@ -3,7 +3,8 @@ const card = document.querySelector(".card");
 const container = document.querySelector(".container");
 //Items
 const title = document.querySelector(".title");
-const car = document.querySelector(".car img");
+const smoke = document.querySelector(".smoke");
+const car = document.querySelector(".car .base");
 const wheels = document.querySelectorAll(".car .wheel");
 const wheelFrame = document.querySelector(".wheel-frame");
 const circle = document.querySelector(".circle");
@@ -65,10 +66,12 @@ container.addEventListener("mousemove", function(e){
     engine.play();
     engine.addEventListener("ended", function(){
       circle.classList.remove("drive");
+      smoke.style.animation = "none";
       restart = true;
     });
     if(restart === true) {
       restart = false;
+      smoke.style.animation = "smoke 14s";
       wheels.forEach(function(wheel){
         wheel.style.transform = "translateZ(101px) rotate(" + degrees + "deg)";
         setTimeout(function(){
@@ -115,13 +118,13 @@ function changeColor(color) {
     num = "192";
   } else if(color.classList.contains("yellow")){
     car.style.filter = "hue-rotate(30deg) brightness(1.5)";
-    circle.style.filter = "hue-rotate(30deg) brightness(1.5)";
+    circle.style.filter = "hue-rotate(30deg) brightness(1.5) opacity(.9)";
   } else if(color.classList.contains("gold")){
     car.style.filter = "hue-rotate(2deg) sepia(.9) contrast(1.4) saturate(1.6)"
-    circle.style.filter = "hue-rotate(2deg) brightness(.5) grayscale()"
+    circle.style.filter = "hue-rotate(2deg) brightness(.3) grayscale() opacity(.9)"
   }
   car.style.filter = "hue-rotate(" + num +"deg)";
-  circle.style.filter = "hue-rotate(" + num +"deg)";
+  circle.style.filter = "hue-rotate(" + num +"deg) opacity(.9)";
 };
 function activate(color) {
   colorButton.forEach(function(button) {
@@ -136,7 +139,7 @@ function activate(color) {
       num = .5;
     }
     car.style.filter = "hue-rotate(0) brightness(" + num + ") sepia(0) grayscale()";
-    circle.style.filter = "hue-rotate(0) brightness(" + num + ") sepia(0) grayscale()";
+    circle.style.filter = "hue-rotate(0) brightness(" + num + ") sepia(0) grayscale() opacity(.9)";
   } else {
     changeColor(color);
   }

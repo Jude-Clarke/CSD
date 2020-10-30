@@ -207,13 +207,27 @@ button.active, button:focus {
 .carousel .next {
   right: 5px;
 }
+
 .wheels {
   transition: all 0.75s;
 }
-.wheels {
-  transition: all 0.75s;
+.smoke {
+  float: left;
+  margin-left: -430px;
+  margin-top: -35px;
+  opacity: 0;
 }
 /* Animations */
+@keyframes smoke {
+  0% {opacity: 0;}
+  17% {opacity: 0;}
+  30% {opacity: .6;}
+  45% {opacity: .0;}
+  60% {opacity: .0;}
+  70% {opacity: .3;}
+  90% {opacity: 0;}
+  100% {opacity: 0;}
+}
 
 @keyframes fadeIn {
 	0% {opacity: 0;}
