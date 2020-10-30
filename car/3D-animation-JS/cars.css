@@ -72,18 +72,18 @@ background-image: url("https://www.transparenttextures.com/patterns/fabric-of-sq
 
 .front {
   width: 72px;
-  position: absolute;
-  right: 112px;
-  top: 150px;
   z-index: 3;
+  float: left;
+  margin-top: 52px;
+  margin-left: -144px;
 }
 
 .back {
   width: 73px;
-  position: absolute;
-  right: 396px;
-  top: 145px;
   z-index: 3;
+  float: left;
+  margin-left: -430px;
+  margin-top: 50px;
 }
 
 
