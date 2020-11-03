@@ -26,8 +26,8 @@ body {
 }
 .show {
   margin-top: 20vh;
-  height: 25vh;
-  width: 35%;
+  height: 35vh;
+  width: 45%;
   border-radius: 50%;
   font-size: 3rem;
   filter: brightness(.9);
@@ -217,6 +217,16 @@ button.active, button:focus {
   margin-top: -35px;
   opacity: 0;
 }
+.flame {
+  width: 20%;
+  height: 70px;
+  transform: rotate(90deg) scale(-1);
+  float: left;
+  margin-top: 35px;
+  margin-left: -80px;
+  z-index: 4;
+  opacity: 0;
+}
 /* Animations */
 @keyframes smoke {
   0% {opacity: 0;}
@@ -227,6 +237,82 @@ button.active, button:focus {
   70% {opacity: .3;}
   90% {opacity: 0;}
   100% {opacity: 0;}
+}
+@keyframes flame {
+  0% {opacity: 0;}
+  17% {opacity: 0;}
+  25% {opacity: 0;}
+  25.25% {opacity: .8;}
+  25.5% {opacity: 0;}
+  25.75% {opacity: .8;}
+  26% {opacity: 0;}
+  26.25% {opacity: 75;}
+  26.50% {opacity: 0;}
+  26.75% {opacity: .7;}
+  27% {opacity: 0;}
+  27.25% {opacity: .7;}
+  27.5% {opacity: 0;}
+  27.75% {opacity: .65;}
+  28% {opacity: 0;}
+  28.25% {opacity: .6;}
+  28.5% {opacity: 0;}
+  28.75% {opacity: .6;}
+  29% {opacity: 0;}
+  /* 28.5% {opacity: .5;}
+  29% {opacity: 0;} */
+  29.5% {opacity: .4;}
+  30% {opacity: 0;}
+  30.5% {opacity: .3;}
+  31% {opacity: 0;}
+  31.5% {opacity: .2;}
+  32% {opacity: 0;}
+  32.5% {opacity: .1;}
+  33% {opacity: 0;}
+  70% {opacity: 0;}
+  79.5% {opacity: 0;}
+  79.75% {opacity: .9;}
+  80% {opacity: 0;}
+  80.25% {opacity: .8;}
+  80.5% {opacity: 0;}
+  80.75% {opacity: .7;}
+  81% {opacity: 0;}
+  81.25% {opacity: .6;}
+  81.50% {opacity: 0;}
+  81.75% {opacity: .5;}
+  82% {opacity: 0;}
+  82.25% {opacity: .4;}
+  82.5% {opacity: 0;}
+  82.75% {opacity: .3;}
+  83% {opacity: 0;}
+  83.25% {opacity: .2;}
+  83.5% {opacity: 0;}
+  83.75% {opacity: .1;}
+  84% {opacity: 0;}
+  87.75% {opacity: 0;}
+  88% {opacity: .6;}
+  89% {opacity: 0;}
+  89.9% {opacity: .9;}
+  90% {opacity: 0;}
+  90.25% {opacity: .8;}
+  /* 90.5% {opacity: 0;}
+  90.75% {opacity: .7;}
+  91% {opacity: 0;}
+  91.25% {opacity: .6;}
+  91.50% {opacity: 0;}
+  91.75% {opacity: .5;} */
+  92% {opacity: 0;}
+  /* 92.25% {opacity: .4;}
+  92.5% {opacity: 0;}
+  92.75% {opacity: .3;} */
+  /* 36.5% {opacity: 0;}
+  37% {opacity: .1;}
+  37.5% {opacity: 0;}
+  93.4% {opacity: 0;}
+  94.7% {opacity: 0;}
+  95% {opacity: .6;}
+  95.3% {opacity:0;}
+  96% {opacity: 8;};
+  96.8% {opacity: 0;} */
 }
 
 @keyframes fadeIn {

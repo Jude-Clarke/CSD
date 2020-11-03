@@ -4,6 +4,7 @@ const container = document.querySelector(".container");
 //Items
 const title = document.querySelector(".title");
 const smoke = document.querySelector(".smoke");
+const flame = document.querySelector(".flame");
 const car = document.querySelector(".car .base");
 const wheels = document.querySelectorAll(".car .wheel");
 const wheelFrame = document.querySelector(".wheel-frame");
@@ -16,7 +17,8 @@ const carouselButtons = document.querySelectorAll(".carousel_button");
 const numberOfCards = document.querySelectorAll(".carousel .card").length;
 const carouselCards = document.querySelector(".carousel_cards");
 const animation = document.querySelector(".car-animation");
-const startButton = document.querySelector(".start");
+const startScreen = document.querySelector(".start");
+const startButton = document.querySelector(".show");
 const showRoom = document.querySelector("#show-room");
 let cardIndex = 2;
 let translateX = 0;
@@ -41,7 +43,7 @@ var engine = new Audio("./sounds/gallardo.mp3");
 // document.body.addEventListener("click", animate);
 // Moving Animation Event
 startButton.addEventListener("click", function() {
-  startButton.classList.add("hide");
+  startScreen.classList.add("hide");
   showRoom.classList.remove("hide");
 });
 animate();
@@ -62,16 +64,19 @@ container.addEventListener("mousemove", function(e){
     //Popout
     title.style.transform = "translateZ(50px)";
     car.style.transform = "translateZ(100px)";
+    flame.style.transform = "rotate(90deg) scale(-1) translateZ(100px)";
     circle.classList.add("drive");
     engine.play();
     engine.addEventListener("ended", function(){
       circle.classList.remove("drive");
       smoke.style.animation = "none";
+      flame.style.animation = "none";
       restart = true;
     });
     if(restart === true) {
       restart = false;
       smoke.style.animation = "smoke 14s";
+      flame.style.animation = "flame 21s";
       wheels.forEach(function(wheel){
         wheel.style.transform = "translateZ(101px) rotate(" + degrees + "deg)";
         setTimeout(function(){
@@ -92,6 +97,7 @@ container.addEventListener("mousemove", function(e){
     card.style.transform = `rotateY(0deg) rotateX(0deg)`;
     title.style.transform = "translateX(0px)";
     car.style.transform = "translateZ(0px)";
+    flame.style.transform = "rotate(90deg) scale(-1) translateZ(0px)";
     wheels.forEach(function(wheel) {
       wheel.style.transition = "all 0.75s ease";
     });

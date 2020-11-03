@@ -85,7 +85,6 @@ body::-webkit-scrollbar-thumb {
   border: 3px #ffa62b solid;
   padding: 5px;
   padding-right: 10px;
-
   border-radius: 36%;
   margin-top: 5px;
   float: left;
@@ -250,8 +249,8 @@ body::-webkit-scrollbar-thumb {
   font-size: 2rem;
 }
 .pop-up {
-	height: auto;
-	width: 28%;
+	/* height: auto;
+	width: 28%; */
 	position: relative;
 	margin-top: -550px;
 	margin-bottom: -2px;
@@ -339,6 +338,18 @@ footer p {
 	-o-animation: fadeIn ease 1s;
 	-ms-animation: fadeIn ease 1s;
 }
+
+.distortion {
+  width: 35%;
+	height: 600px;
+	object-fit: cover;
+	opacity: .95;
+	/* background-color: green; */
+  /* align-self: center; */
+}
+
+
+
 .hidden {
   display: none;
 }

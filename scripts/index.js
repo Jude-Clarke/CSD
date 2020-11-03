@@ -15,6 +15,7 @@ var iScrollAt = 20; // start scrolling up at this many lines
 var iTextPos = 0; // initialise text position
 var sContents = ''; // initialise contents variable
 var iRow; // initialise current row
+var hologram = document.querySelector(".distortion");
 
 function typewriter()
 {
@@ -62,3 +63,26 @@ function typeh3()
 }
 
 typewriter();
+
+new hoverEffect({
+  parent: document.querySelector(".distortion"),
+  intensity: 5,
+  image1: "https://i.ibb.co/KKkdfh6/me-torso-wide.png",
+  image2: "https://i.ibb.co/KKkdfh6/me-torso-wide.png",
+  angle: Math.PI / 8,
+  speedIn: 2,
+  speedOut: 2,
+  displacementImage: "https://images.pexels.com/photos/97077/pexels-photo-97077.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+});
+
+var distort = new Audio("./sounds/hologram.mp3");
+distort.volume = .2;
+
+hologram.addEventListener("mouseover", function() {
+  distort.load();
+  distort.play();
+});
+hologram.addEventListener("mouseout", function() {
+  distort.load();
+  distort.play();
+});
